@@ -1,0 +1,219 @@
+/* Styles for the main panel */
+
+/* Heading inside the panel */
+
+.card {
+  border-left: 2px solid #cc5500; /* Matches your card color */
+  border-bottom: 2px solid #cc5500; /* Matches your card color */
+}
+
+.spaceBetween {
+  width: 100%;
+  display: flex;
+  justify-content: space-between; /* Align to the edges */
+}
+
+.action-button {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+  font-weight: bold;
+  border-radius: 8px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  cursor: pointer;
+}
+
+.add-button {
+  background-color: #1db954;
+  color: white;
+}
+
+.add-button:hover {
+  background-color: #1ed760;
+}
+
+.remove-button {
+  background-color: #e74c3c;
+  color: white;
+}
+
+.remove-button:hover {
+  background-color: #ff6b6b;
+}
+
+/* Styles for the list of cards */
+.cardList {
+  display: grid;
+  grid-template-columns: 1fr; /* Single column on mobile */
+  gap: 16px;
+  width: 100%;
+}
+
+/* Card container for each track */
+.card {
+  display: flex;
+  flex-wrap: wrap !important;
+  flex-direction: column; /* Stack vertically by default */
+  padding: 12px;
+  /* background-color: rgba(0, 0, 0, 0.8); */
+  border-radius: 8px;
+  color: #fff;
+  transition: transform 0.2s, box-shadow 0.2s;
+  max-width: 100%;
+}
+
+@media screen and (min-width: 760px) {
+  .card {
+    flex-direction: row; /* Align items horizontally */
+    align-items: end; /* Center vertically */
+    gap: 1rem;
+  }
+
+  .cardImage {
+    margin-bottom: 0; /* Remove space below the image */
+  }
+}
+
+/* Add hover effect for larger screens */
+.card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Flex container for track info */
+.cardContent {
+  display: flex;
+  flex-grow: 1;
+}
+
+/* Image for the track */
+.cardImage {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+/* Container for title and subtitle */
+.textContainer {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1; /* Take up remaining space */
+  justify-content: center;
+  margin-left: 0; /* No margin on smaller screens */
+  text-align: left;
+}
+
+/* Title of the track */
+.cardTitle {
+  font-size: 1rem;
+  font-weight: 500;
+  margin: 0;
+  color: #fff;
+}
+
+/* Subtitle (artist name) */
+.cardSubtitle {
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.8);
+  margin: 0;
+}
+
+/* Album and duration info */
+.extraInfo {
+  display: flex;
+  align-items: center;
+  font-size: 0.85rem;
+  margin-top: 8px;
+}
+
+/* Album name */
+.albumName {
+  flex: 1;
+  color: rgba(255, 255, 255, 0.8);
+  text-align: left;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis; /* Truncate if too long */
+}
+
+/* Duration */
+.duration {
+  color: rgba(255, 255, 255, 0.8);
+  min-width: 50px;
+}
+
+.cardButton {
+  background-color: #1db954; /* Spotify green */
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-top: 10px;
+}
+
+.cardButton:hover {
+  background-color: #1aa34a;
+}
+.cardButton {
+  margin-top: 10px; /* Add breathing room */
+  padding: 8px 16px; /* Larger clickable area */
+}
+
+@media (min-width: 767px) {
+  .extraInfo {
+    display: flex;
+    align-items: center;
+    font-size: 0.85rem;
+    margin-top: 0;
+  }
+
+  .cardContent {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+  }
+}
+
+/* margin-top: 8px;
+
+
+/* Responsive layout: Horizontal on larger viewports */
+@media screen and (min-width: 1024px) {
+  .card {
+    flex-direction: row; /* Switch to horizontal layout */
+    align-items: center;
+  }
+
+  .cardContent {
+    flex-direction: row; /* Horizontal layout */
+    justify-content: space-between; /* Spread out */
+    align-items: center;
+  }
+
+  .textContainer {
+    text-align: left; /* Align text to the left */
+  }
+  .extraInfo {
+    display: flex;
+    align-items: center;
+    font-size: 0.85rem;
+  }
+
+  .cardButton {
+    margin-top: 0;
+    margin-left: auto; /* Push the button to the right */
+  }
+}
+
+@media (max-width: 460px) {
+  .card {
+    align-items: center;
+  }
+}

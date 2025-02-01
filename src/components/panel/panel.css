@@ -1,0 +1,118 @@
+.panel.visible {
+  opacity: 1;
+  transform: translateY(0); /* Slide into place */
+}
+
+.panel:hover {
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2); /* Add a stronger shadow */
+}
+
+/* Panel Styling */
+.panel {
+  opacity: 0;
+  transform: translateY(20px); /* Start slightly off the screen */
+  transition: opacity 0.5s ease, transform 0.5s ease, box-shadow 0.3s ease;
+
+  padding: 16px; /* Uniform spacing inside panels */
+  border-radius: 8px; /* Consistent rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+  background: linear-gradient(180deg, #1e3264, #121212);
+  background: linear-gradient(to bottom, #1e3a8a, #2563eb);
+  background: linear-gradient(
+    135deg,
+    #1d4ed8,
+    #3b82f6
+  ); /* Dark to light blue */
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem; /* Space between sections */
+}
+
+/* Profile-specific styles */
+.profilePanel {
+  text-align: center;
+  color: white;
+}
+
+/* Panel Heading */
+.panelHeading {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 16px;
+  color: #fff;
+  text-align: left;
+  border-bottom: 2px solid #cc5500; /* Matches your card color */
+  padding-bottom: 8px; /* Space under heading */
+}
+
+/* Subtle Divider */
+.panelDivider {
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.1); /* Light divider */
+  margin: 16px 0; /* Space around divider */
+}
+
+/* Action Buttons */
+.action-button {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+  font-weight: bold;
+  border-radius: 8px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  cursor: pointer;
+}
+
+.add-button {
+  background-color: #1db954; /* Green for "Add" */
+  color: white;
+}
+
+.add-button:hover {
+  background-color: #1ed760;
+}
+
+.remove-button {
+  background-color: #e74c3c; /* Red for "Remove" */
+  color: white;
+}
+
+.remove-button:hover {
+  background-color: #ff6b6b;
+}
+
+/* Card List */
+.cardList {
+  display: grid;
+  grid-template-columns: 1fr; /* Single column by default */
+  gap: 16px;
+}
+
+/* Card Content */
+.cardContent {
+  display: flex;
+  flex-direction: column;
+  gap: 8px; /* Space between elements inside the card */
+}
+
+/* Adjust Extra Info Styling */
+.extraInfo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.85rem;
+  margin-top: 8px;
+  padding-top: 8px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1); /* Subtle divider */
+}
+
+@media screen and (min-width: 768px) {
+  .cardList {
+    grid-template-columns: repeat(
+      auto-fit,
+      minmax(300px, 1fr)
+    ); /* Responsive grid */
+  }
+}

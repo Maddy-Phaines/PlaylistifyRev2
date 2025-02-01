@@ -1,0 +1,39 @@
+.profilePanel {
+  text-align: center;
+  color: white;
+}
+.flex {
+  display: flex;
+  justify-content: center;
+}
+.profileInitial {
+  border: 4px solid #f39c12;
+  border-radius: 50%;
+  align-self: center;
+  padding: 1rem;
+}
+
+.profileInitial span {
+  font-weight: 700;
+}
+
+.profileImg {
+  width: 100%;
+}
+
+.profile-panel h2 {
+  font-size: 24px;
+  font-weight: 600;
+  margin: 10px 0;
+  color: #ffffff;
+}
+
+.profile-panel p {
+  font-size: 16px;
+  color: #d9f7f1; /* Slightly muted text */
+}
+
+.profile-panel p.meta {
+  font-size: 14px;
+  color: #b8e8df; /* Subtle text color */
+}

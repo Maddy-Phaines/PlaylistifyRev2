@@ -1,0 +1,50 @@
+.bar {
+  width: 100%;
+  display: flex;
+  position: sticky;
+  background: linear-gradient(90deg, #121212, #1a1a1a);
+  padding: 1rem 2rem;
+  color: white;
+}
+
+.login {
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 0.7rem 1.2rem;
+  transition: background 0.3s ease, transform 0.2s ease;
+  font-size: 1rem; /* Consistent sizing */
+  display: flex; /* Flex for icon and text alignment */
+  align-items: center;
+  gap: 0.5rem; /* Space between icon and text */
+  cursor: pointer; /* Interactive feedback */
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  background: linear-gradient(to bottom, #1e3264, #0d1a42);
+
+  background: linear-gradient(to bottom, #1d004d, #000); /* Purple gradient */
+  background: linear-gradient(to bottom, #004d4d, #002626); /* Teal gradient */
+  background: linear-gradient(to bottom, #1e3a8a, #2563eb);
+}
+
+.login:hover {
+  background-color: #1b5e8a; /* Darker shade for hover feedback */
+}
+
+.login:active {
+  background-color: #163f63; /* Slightly darker for click feedback */
+}
+
+@media (min-width: 700px) {
+  .container {
+    display: flex;
+    align-items: center;
+  }
+}
+
+@media (max-width: 600px) {
+  .container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+}

@@ -1,0 +1,76 @@
+.bar {
+  width: 100%;
+  position: sticky;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  background-color: #333a48;
+  padding: 0.5rem 0.5rem;
+  color: white;
+  justify-content: space-evenly;
+
+  background-color: #2c3e50; /* Deep blue-gray */
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 22px;
+  font-weight: 700;
+  color: #ffffff;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.flex {
+  display: flex;
+}
+
+.flexCol {
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.alignCenter {
+  display: flex;
+}
+
+.alignCenter h1 {
+  font-size: 1.3rem;
+}
+@media (max-width: 699px) {
+  .appName {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    padding-top: 1rem;
+  }
+}
+
+@media (min-width: 700px) {
+  .bar {
+    width: 100%;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    background-color: #333a48;
+    padding: 0.5rem 0.5rem;
+    color: white;
+    justify-content: space-evenly;
+  }
+  .flexCol {
+    flex-direction: row;
+    gap: 1rem;
+  }
+  .alignCenter {
+    display: flex;
+    align-items: center;
+  }
+
+  .appName {
+    display: flex;
+    justify-content: center;
+    padding-top: 0rem;
+  }
+}
